@@ -22,3 +22,12 @@ window.addEventListener("DOMContentLoaded", () => {
     showNewUserOnScreen(userDetailsObj);
   }
 });
+
+function showNewUserOnScreen(user) {
+  const parentNode = document.getElementById("listOfUsers");
+  const childHTML = `<li id=${user.email}>${user.name}-${user.email}
+  
+  </li>`;
+
+  parentNode.innerHTML = parentNode.innerHTML + childHTML;
+}
